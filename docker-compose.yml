@@ -56,6 +56,7 @@ services:
         bundle exec sidekiq -q default -q mailers
     environment:
       REDIS_URL: "redis://redis:6379/0"
+      DOCKER_ENVIRONMENT: "true"
     depends_on:
       - db
       - redis
